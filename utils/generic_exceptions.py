@@ -1,0 +1,4 @@
+#
+
+class FieldErrorException(Exception):
+    pass
