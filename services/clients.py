@@ -55,5 +55,3 @@ def delete_client(db: Session, client_id: int):
         db.commit()
         return "Delete Success"
     raise DeleteClientFailException()
-
-# QUERY !!!!

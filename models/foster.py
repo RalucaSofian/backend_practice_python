@@ -5,7 +5,7 @@ from sqlalchemy.orm import relationship
 from pydantic       import BaseModel
 from datetime       import date
 
-from database  import BaseClass
+from database         import BaseClass
 from models.auth_user import AuthUserDTO
 from models.pet       import PetDTO
 

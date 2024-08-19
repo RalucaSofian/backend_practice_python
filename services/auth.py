@@ -1,4 +1,4 @@
-# makes calls to database
+# make calls to database
 
 from sqlalchemy.orm import Session
 from sqlalchemy     import update, delete

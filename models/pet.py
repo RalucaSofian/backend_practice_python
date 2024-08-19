@@ -5,7 +5,7 @@ from pydantic         import BaseModel
 from sqlalchemy_utils import TSVectorType
 
 from database import BaseClass
-from utils    import generic_exceptions as GenException
+from utils    import query as QueryUtil
 
 
 
@@ -58,4 +58,4 @@ class Pet(BaseClass):
             case "description":
                 return Pet.description
             case _:
-                raise GenException.FieldErrorException
+                raise QueryUtil.FieldErrorException

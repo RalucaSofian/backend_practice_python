@@ -2,9 +2,11 @@
 
 from enum       import Enum
 from fastapi    import Request
-from sqlalchemy import select
 
-from utils import generic_exceptions as GenException
+
+
+class FieldErrorException(Exception):
+    pass
 
 
 class FilterOperation(Enum):
@@ -116,7 +118,7 @@ def parse_query_params(request: Request):
                 order_dir = OrderDirection.from_str(fld_dir[1])
                 query_info.order = OrderInfo(field = fld_dir[0], direction = order_dir)
             else:
-                raise GenException.FieldErrorException
+                raise FieldErrorException
         elif key == "limit":
             query_info.limit = val
         elif key == "offset":
@@ -136,7 +138,7 @@ def parse_query_params(request: Request):
                     elif fld_val.lower() == "false":
                         fld_val = False
                     else:
-                        raise GenException.FieldErrorException
+                        raise FieldErrorException
                 filter = FilterInfo(field = fld_op[0], operation = fld_operation, value = fld_val)
             query_info.filters.append(filter)
 

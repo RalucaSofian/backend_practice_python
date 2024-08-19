@@ -55,5 +55,3 @@ def delete_foster(db: Session, foster_id: int):
         db.commit()
         return "Delete Success"
     raise DeleteFosterFailException()
-
-    # get all + query:
