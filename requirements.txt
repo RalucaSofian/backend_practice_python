@@ -1,0 +1,10 @@
+fastapi[standard]==0.115.6
+passlib==1.7.4
+pydantic==2.10.3
+python-dotenv==1.0.1
+SQLAlchemy==2.0.31
+sqlalchemy_searchable==2.1.0
+SQLAlchemy_Utils==0.41.2
+psycopg2-binary==2.9.9
+PyJWT==2.8.0
+alembic==1.13.2
